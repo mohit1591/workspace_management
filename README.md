@@ -23,8 +23,22 @@ php artisan serve --host=localhost --port=8000
 
 You also need to install postgress else you can simply install mysql 
 
-Currently have only built login and items api 
+Currently have only built login, items and attachments api 
 The API will be available at `http://localhost:8000/api/login`
+
+Authentication
+POST /api/login - Login
+GET /api/me - Get current user
+
+Items
+GET /api/items - List items (pagination)
+POST /api/items - Create item
+GET /api/items/{id} - Get item details
+PUT/PATCH /api/items/{id} - Update item
+DELETE /api/items/{id} - Soft delete item
+
+Attachments
+POST /api/items/{id}/attachments - Upload file
 
 ## Login Credentials
 
