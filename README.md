@@ -21,9 +21,9 @@ php artisan migrate --seed
 php artisan serve --host=localhost --port=8000
 ```
 
-You also need to install posgress else you can simply install mysql 
+You also need to install postgress else you can simply install mysql 
 
-Currently have only built login but have written necessary boilerplate code required and some logic
+Currently have only built login and items api 
 The API will be available at `http://localhost:8000/api/login`
 
 ## Login Credentials
@@ -98,4 +98,4 @@ PostgreSQL was not set up on my system initially, so I had to install and config
 
 I began working on the task around 3:00 PM. Additionally, while setting up the React project, I encountered challenges because React has recently been updated to version 19, which introduced several breaking changes. My prior experience is primarily with React 18. As a result, I set up the project using React 19, but due to time constraints, I was unable to create any pages or components.
 
-However, I have implemented the basic project boilerplate, defined the necessary migrations and seeders, included a login API, and created the required models along with their relationships.
+However, I have implemented the basic project boilerplate, defined the necessary migrations and seeders, included a login API and Items API, and created the required models along with their relationships.
