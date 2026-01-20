@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ItemController;
@@ -35,7 +36,7 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/me', [AuthenticatedSessionController::class, 'me']);
-    
+
     // Items
     Route::get('/items', [ItemController::class, 'index']);
     Route::post('/items', [ItemController::class, 'store']);
@@ -43,4 +44,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/items/{item}', [ItemController::class, 'update']);
     Route::patch('/items/{item}', [ItemController::class, 'update']);
     Route::delete('/items/{item}', [ItemController::class, 'destroy']);
+
+    // Attachments
+    Route::post('/items/{item}/attachments', [AttachmentController::class, 'store']);
 });
