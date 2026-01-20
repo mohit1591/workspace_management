@@ -2,7 +2,7 @@
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/mohit1591/workspace_management
 cd workspace-management
 ```
 
@@ -16,17 +16,15 @@ composer install
 php artisan migrate --seed
 ```
 
-5. **Create storage symlink**
-```bash
-php artisan storage:link
-```
-
 6. **Start the development server**
 ```bash
-php artisan serve
+php artisan serve --host=localhost --port=8000
 ```
 
-The API will be available at `http://localhost:8000`
+You also need to install posgress else you can simply install mysql 
+
+Currently have only built login but have written necessary boilerplate code required and some logic
+The API will be available at `http://localhost:8000/api/login`
 
 ## Login Credentials
 
